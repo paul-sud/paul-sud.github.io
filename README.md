@@ -4,9 +4,9 @@ Based on [Elemental Gatsby template](https://github.com/akzhy/gatsby-theme-eleme
 
 ## Usage
 
-You will need `npm` and [Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/) installed.
+You will need `npm` and [Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/) installed. You should NOT edit files on the `master` branch, since that is the branch GitHub uses to find the content to serve. Instead, edit the files on `dev` and only update `master` by runnning the deploy script.
 
-To deploy site to GitHub pages, run the following. Do NOT run this on the master branch, since this will commit to `master` on the remote:
+To deploy site to GitHub pages, run the following:
 
 ```
 npm run deploy
