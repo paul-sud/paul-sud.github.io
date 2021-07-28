@@ -15,6 +15,8 @@ description: Serverless computing of md5 hashes of large objects on AWS S3 using
 
 ## Introduction
 
+> To see the code described in this article, please visit https://github.com/ENCODE-DCC/s3-md5-hash/
+
 MD5 hashes, or checksums, provide an almost-unique signature to files that can be used for non-cryptographic purposes like verifying data integrity or implementing a content addressable filesystem. Amazon Web Services (AWS) S3 uses something similar for object `ETag`s. For small objects uploaded in a single API call, the `ETag` is equivalent to the MD5 hash. However, if the object was uploaded using a multipart upload, then the `ETag` will be a different identifier, still based on the object contents but much less useful.
 
 For our use case, we have a significant number of objects uploaded in multiple parts, and we need the MD5s in order to POST metadata objects in a database. Furthermore, the objects need to be posted in a particular order so it is not trivially parallelizable. One solution would be to just compute the hashes at POST time, however this doesn't scale well. What we really need is a way to compute and store the hashes beforehand.
