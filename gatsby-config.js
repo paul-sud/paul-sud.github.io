@@ -3,7 +3,7 @@ const siteMetadata = {
     siteUrl: `http://localhost`,
     capitalizeTitleOnHome: true,
     logo: `/images/logo.png`,
-    icon: `/images/icon.png`,
+    icon: `/images/favicon.png`,
     titleImage: `/images/wall.jpg`,
     introTag: `Beats and Bytes`,
     description: `My personal website.`,
@@ -84,6 +84,7 @@ const plugins = [
         options: {
             plugins: [
                 "gatsby-remark-copy-linked-files",
+                "gatsby-remark-autolink-headers",
                 {
                     resolve: `gatsby-remark-images`,
                     options: {

@@ -26,7 +26,7 @@ Almost all features of this starter are editable. In order to personalize, open 
 
 Open the `contents/blog` folder and create a new folder with the name you wish to see as the URL. Inside the folder create an `index.md` file and also include any files you wish to add.
 
-The frontmatter should be of the below structure
+The formatter should be of the below structure
 
 ```
 ---
@@ -35,7 +35,7 @@ date: 2019-06-29 <-- Date should be in the given format
 template: blog <-- The template you wish to use. "blog" for blog posts
 image: ./image.jpg <-- Image shown on the list pages and also used as open graph image
 banner: ./banner.jpg <-- Banner shown in the blog post
-description: The description shown in the listing page. Also used for SEO description. 
+description: The description shown in the listing page. Also used for SEO description.
 ---
 ```
 
